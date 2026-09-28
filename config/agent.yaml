@@ -1,0 +1,25 @@
+# Agent Manifest — AgentRegistry entry point
+# AgentRegistry reads discovery and compile-time keys at the root level.
+id: "INS-C2-906"
+name: "ClaimConsistencyCheckAgent"
+namespace: "ins"
+version: "1.0.0"
+enabled: true
+category: "Cat 2"
+generation_mode: "llm"
+industry: "INS"
+
+# Opaque compatibility metadata.
+base_type: "AgentBaseGraph"
+
+# Entry point — single dotted import path (module.Class).
+class: "src.graph.graph.ClaimConsistencyCheckAgent"
+
+# Security
+required_trust_level: "VERIFIED_EXTERNAL"
+
+requires:
+  secrets:
+    - ASSESSMENT_DB_PATH
+    - CLAIMANT_HASH_SALT
+  extras: []

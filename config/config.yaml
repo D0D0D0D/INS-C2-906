@@ -1,0 +1,18 @@
+# Runtime parameters — loaded separately from config/agent.yaml.
+
+max_retry: 3
+timeout_seconds: 30
+memory_enabled: false
+hitl:
+  enabled: false
+llm:
+  temperature: 0.0
+limits:
+  max_documents: 12
+  max_total_chars: 400000
+lv3:
+  min_population_n: 30
+  similar_cases_top_n: 5
+  repeat_lookback_days: 365
+retention:
+  assessment_case_retention_days: 1825
